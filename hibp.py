@@ -12,7 +12,7 @@ HEADERS = {
     "user-agent" : "BreakAlertsApp"
 }
 
-async def check_breaks(email : str):
+async def check_breaches(email : str):
     url = f"{BASE_URL}/breachedaccount/{email}?truncateResponse=false"
     async with httpx.AsyncClient() as client:
         response = await client.get(url, headers=HEADERS)
